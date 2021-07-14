@@ -14,8 +14,8 @@ function Header() {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                    <ul className="navbar-nav ">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">Home</NavLink>
                         </li>
@@ -29,7 +29,7 @@ function Header() {
                             <NavLink className="nav-link" to="/login">Profile</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link text-center" to="/about"><div>About</div><div><FontAwesomeIcon icon={faQuestion}/></div></NavLink>
+                            <NavLink className="nav-link text-center" to="/about"><div className="hidden">About</div><div><FontAwesomeIcon icon={faQuestion}/></div></NavLink>
                         </li>
                     </ul>
                 </div>
