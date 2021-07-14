@@ -1,7 +1,7 @@
 function Footer() {
 
     return (
-        <div>
+        <div className="container-fluid pt-5">
             This is footer
         </div>
     )

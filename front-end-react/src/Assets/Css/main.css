@@ -1,0 +1,17 @@
+.hero-image-wrapper {
+    height: 80vh;
+    width: 100%;
+    background-image: url(../Images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: -1;
+}
+
+main {
+    background-color: #e2dcdc;
+}

@@ -1,9 +1,21 @@
+import '../Assets/Css/main.css';
+
 function Home() {
 
-    return ( <
-        div >
-        This is Home <
-        /div>
+    return (
+        <main>
+            <div className="hero-image-wrapper pt-5">
+                <div className="container pt-5">
+                    <div className="row">
+                        <div className="col">
+                            This is Home
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
     )
 }
 
