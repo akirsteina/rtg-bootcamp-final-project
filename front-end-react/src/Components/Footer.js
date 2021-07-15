@@ -28,7 +28,7 @@ function Footer() {
                     </svg></a>
                 </div>
                 <div className="col-11 offset-1 col-md-11 offset-md-2 col-lg-4 offset-lg-0 footer-end-col py-3 d-flex align-items-center justify-content-center">
-                <span className="no-special-font">&copy;</span> Healthy Plants 2021
+                <span className="no-special-font">&copy;</span> Happy Plants 2021
                 </div>
             </div>
         </footer>
