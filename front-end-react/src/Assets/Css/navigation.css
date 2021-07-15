@@ -41,8 +41,8 @@
     transform: scale(1.5);
 }
 
-.nav-title:hover {
-    color: rgb(99, 117, 77);
+.nav-link.nav-title:hover {
+    color: rgb(99, 117, 77) !important;
 }
 
 .nav-title {
