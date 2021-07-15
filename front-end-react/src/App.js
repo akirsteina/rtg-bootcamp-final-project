@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <Router>
-        {/* <ScrollToTop/> */}
+        <ScrollToTop/>
         <Header />
         <Switch>
           <Route exact path="/">
@@ -27,7 +27,7 @@ function App() {
           <Route path="/articles/:articleID">
             <Article />
           </Route>
-          <Route path="/chat">
+          <Route path="/forum">
             <Forum />
           </Route>
           <Route path="/login">

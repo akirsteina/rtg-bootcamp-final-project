@@ -1,37 +1,49 @@
 
 import '../Assets/Css/navigation.css';
-import {NavLink} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faQuestion} from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faComment  } from '@fortawesome/free-solid-svg-icons';
+import { faBars  } from '@fortawesome/free-solid-svg-icons';
+import { faHome  } from '@fortawesome/free-solid-svg-icons';
+import logo from '../Assets/Images/logo.png';
 
 
 function Header() {
 
+    
+
     return (
-        <div className="container-fluid nav-wrapper">
-            <nav className="navbar navbar-expand-sm navbar-light px-5">
-                <NavLink className="navbar-brand" to="/">Navbar</NavLink>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav ">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/articles">Articles</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/forum">Forum</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">Profile</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link text-center" to="/about"><div className="hidden">About</div><div><FontAwesomeIcon icon={faQuestion}/></div></NavLink>
-                        </li>
-                    </ul>
+        <div className="container-fluid hero-image-wrapper">
+            <nav className="navbar nav-wrapper justify-content-center justify-content-sm-between">
+                <NavLink className="navbar-brand ps-5" to="/">
+                    <img src={logo} alt="" className="logo-img px-2"></img>
+                    </NavLink>
+                <div className="navbar-nav d-flex flex-row justify-content-end px-5 fs-4" id="navbarNav">
+                    <NavLink className="nav-link text-center mx-2" exact to="/">
+                        <div className="nav-title">Home</div>
+                        <div className="nav-icon"><FontAwesomeIcon icon={faHome} /></div>
+
+                        </NavLink>
+                    <NavLink className="nav-link text-center mx-2" to="/articles">
+                        <div className="nav-title">Articles</div>
+                        <div className="nav-icon"><FontAwesomeIcon icon={faBars} /></div>
+
+                        </NavLink>
+                    <NavLink className="nav-link text-center mx-2" to="/forum">
+                        <div className="nav-title">Forum</div>
+                        <div className="nav-icon"><FontAwesomeIcon icon={faComment} /></div>
+
+                        </NavLink>
+                    <NavLink className="nav-link text-center mx-2" to="/login">
+                        <div className="nav-title">Profile</div>
+                        <div className="nav-icon"><FontAwesomeIcon icon={faUser} /></div>
+                        </NavLink>
+                    <NavLink className="nav-link text-center mx-2" to="/about">
+                        <div className="nav-title">About</div>
+                        <div className="nav-icon"><FontAwesomeIcon icon={faQuestion} /></div>
+                    </NavLink>
                 </div>
             </nav>
         </div>
