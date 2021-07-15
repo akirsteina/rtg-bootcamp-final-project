@@ -23,6 +23,17 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.nav-title,
+.nav-icon {
+    color: rgb(144, 172, 109) !important;
+    text-shadow: 2px 2px black;
+}
+
+.nav-link.active,
+.nav-icon.active {
+    color: #f19824 !important;
+}
+
 .nav-icon:hover,
 .logo-img:hover,
 .social-media-icon:hover {
@@ -30,35 +41,29 @@
     transform: scale(1.5);
 }
 
-.nav-title,
-.nav-icon {
-    color: rgba(144, 172, 109, 1);
-    text-shadow: 2px 2px black;
-}
-
 .nav-title:hover {
     color: rgb(99, 117, 77);
 }
 
 .nav-title {
-    display: none;
+    display: none !important;
     font-family: 'Lobster', cursive;
 }
 
 @media only screen and (min-width: 768px) {
     .nav-title {
-        display: block;
+        display: block !important;
         justify-content: space-between;
     }
 }
 
 .nav-icon {
-    display: block;
+    display: block !important;
 }
 
 @media only screen and (min-width: 768px) {
     .nav-icon {
-        display: none;
+        display: none !important;
     }
 }
 

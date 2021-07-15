@@ -3,8 +3,8 @@ import footerImg from '../Assets/Images/footer-img.png';
 function Footer() {
     // {/* <span class="text-muted">Place sticky footer content here.</span> */ }
     return (
-        <footer class="footer pt-5 container-fluid">
-            <div className="row pt-5">
+        <footer class="footer container-fluid">
+            <div className="row">
                 <div className="col-11 offset-1 col-md-5 offset-md-2 col-lg-2 offset-lg-2 special-footer-col d-flex align-items-end justify-content-center">
                 <img src={footerImg} className="footer-img" alt=""></img>
                 
