@@ -60,7 +60,7 @@ a {
 }
 
 .articles-row {
-    background-color: rgb(144, 172, 109);
+    background-color: #46583e;
 }
 
 .carousel {
@@ -91,4 +91,21 @@ body {
 
 .special-title:after {
     margin-left: 10px
+}
+
+.subscribe-btn {
+    background-color: #232822 !important;
+    color: #859f79 !important;
+}
+
+.subscribe-btn:hover {
+    color: #f19824 !important;
+}
+
+.subscribe-btn.focus {
+    box-shadow: 1px 1px #46583e !important;
+}
+
+.card {
+    border: none !important;
 }
