@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .header-wrapper {
-    height: 73vh;
-    color: rgba(144, 172, 109, 1);
-    text-shadow: 2px 2px black;
+    padding-top: 30vh;
+    height: 78vh;
 }
 
 .content-wrapper {
     background-color: #e8e8e8;
-    z-index: -5;
 }
 
 .main-header {
@@ -16,6 +14,11 @@
 
 a {
     text-decoration: none !important;
+}
+
+.head-info {
+    color: rgba(144, 172, 109, 1);
+    text-shadow: 2px 1px black;
 }
 
 
@@ -54,4 +57,38 @@ a {
     text-shadow: 2px 2px black;
     outline-color: rgba(71, 126, 232, 0);
     outline-offset: 300px;
+}
+
+.articles-row {
+    background-color: rgb(144, 172, 109);
+}
+
+.carousel {
+    width: 500px;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.special-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.special-title:before,
+.special-title:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.special-title:before {
+    margin-right: 10px
+}
+
+.special-title:after {
+    margin-left: 10px
 }
