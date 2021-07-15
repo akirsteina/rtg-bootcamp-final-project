@@ -1,0 +1,39 @@
+.content-wrapper {
+    background-color: #e8e8e8;
+}
+
+.article-main-img {
+    max-height: 63vh;
+}
+
+.special-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.special-title:before,
+.special-title:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.special-title:before {
+    margin-right: 10px
+}
+
+.special-title:after {
+    margin-left: 10px
+}
+
+.main-header {
+    font-family: 'Lobster', cursive;
+    color: rgba(144, 172, 109, 1);
+    text-shadow: 2px 1px black;
+}
+
+.article-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+}
