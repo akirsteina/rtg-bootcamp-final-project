@@ -1,9 +1,15 @@
 function Article() {
 
     return (
-        <div>
-            This is Article
-        </div>
+        <main>
+            <div className="container">
+                <div className="row py-5 my-5">
+                    <div className="col">
+                    This is Article
+                    </div>
+                </div>
+            </div>
+        </main>
     )
 }
 
