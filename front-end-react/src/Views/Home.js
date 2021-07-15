@@ -7,9 +7,9 @@ import carousel3 from '../Assets/Images/carousel3.jpg';
 function Home() {
 
     const articles = [
-        { title: 'Article 1', id: 1, image: carousel1 },
-        { title: 'Article 2', id: 2, image: carousel2 },
-        { title: 'Article 3', id: 3, image: carousel3 },
+        { title: 'Best potting mixes for your succulents: is perlite really that good?', id: 'potting-mixes', image: carousel1, shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
+        { title: 'Plastic pots - no more!', id: 'plastic-pots', image: carousel2, shortDescription: "Vel quo laudantium enim tempore explicabo harum earum ipsa?" },
+        { title: '10 hottest succulents of this summer', id: 'hottest-succulents', image: carousel3, shortDescription: "Facilis fuga, vero voluptas dicta fugiat consectetur dolor, placeat nulla reprehenderit earum porro." },
     ]
 
     const articlesCards = articles.map((article, index) => {
@@ -19,11 +19,14 @@ function Home() {
                     <NavLink to={`/articles/${article.id}`} className="card-element">
                         <img src={article.image} className="card-img-top" alt="" />
                         <div className="card-body card-img-overlay">
+                        <button className="btn articles-btn fw-bold" to="/articles">Read more</button>
+
                         </div>
                     </NavLink>
-                    <p className="card-text text-center fs-4">{article.title}</p>
-                    <NavLink to={`/articles/${article.id}`} className="btn btn-lg category-btn">Read more</NavLink>
                 </div>
+                <NavLink to={`/articles/${article.id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
+                <p className="lead text-center text-light">{article.shortDescription}</p>
+                
             </div>
         )
     })
@@ -53,9 +56,17 @@ function Home() {
                     </div>
                 </div>
                 <div className="row py-5">
-                    <div className="col-12 col-lg-5 offset-lg-1 about-txt text-center px-3 pt-3">
-                        <p className="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quibusdam delectus recusandae unde pariatur veritatis aliquid quo esse aliquam. Inventore ratione suscipit, explicabo eius quaerat impedit velit iste sunt aliquam! Inventore ratione suscipit, explicabo eius quaerat impedit velit iste sunt aliquam! Inventore ratione suscipit, explicabo eius quaerat impedit velit iste sunt aliquam!</p>
-                        <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati accusantium ullam dolores porro voluptas enim officiis sit rerum sint quibusdam. Libero incidunt nisi quis architecto quas sunt quos animi ullam!</p>
+                    <div className="col-12 col-lg-5 offset-lg-1 about-txt px-3 pt-3">
+                        <div className="quotes start-quotes text-start"></div>
+                        <blockquote className="blockquote text-center pt-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sapiente voluptatem tempora necessitatibus rem reprehenderit minus, tempore, sint aliquam odio, architecto commodi facilis. Nemo eaque, eius dignissimos totam possimus ducimus?</p>
+                        </blockquote>
+                        <figcaption className="blockquote-footer text-center">
+                            A famous quote from <cite title="Source Title">The plant lovers</cite>
+                        </figcaption>
+                        <div className="d-flex justify-content-end">
+                            <div className="quotes end-quotes"></div>
+                        </div>
                     </div>
                     <div className="col-12 col-lg-5 d-flex justify-content-center">
                         <div id="carouselExampleControls" className="carousel slide carousel-fade d-flex align-items-center" data-bs-ride="carousel">
@@ -83,10 +94,14 @@ function Home() {
                 </div>
                 <div className="row pt-5 articles-row">
                     <div className="col-10 offset-1">
-                    <h3 className="main-header text-center">Read the newest articles!</h3>
+                        <h1 className="main-header text-center text-light">Read all the newest articles!</h1>
                         <div className="row py-5 d-flex justify-content-center">
                             {articlesCards}
+                            <div className="col-12 text-end pt-4">
+                                <NavLink className="btn articles-btn fw-bold" to="/articles">See all articles</NavLink>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <div className="row">
@@ -95,9 +110,9 @@ function Home() {
                         <form>
                             <div className="mb-3">
                                 <label for="email-input" className="form-label text-muted">Enter your e-mail address</label>
-                                <input type="email" className="form-control" id="email-input"/>
+                                <input type="email" className="form-control" id="email-input" />
                                 <div id="emailHelp" className="form-text">Get the newest articles, insights into potting, and more!</div>
-                                <button className="btn subscribe-btn my-2">Submit</button>
+                                <button className="btn main-page-btn fw-bold my-3">Submit</button>
                             </div>
                         </form>
                     </div>

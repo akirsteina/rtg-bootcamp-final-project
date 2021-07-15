@@ -21,6 +21,14 @@ a {
     text-shadow: 2px 1px black;
 }
 
+.card-articles-title {
+    color: #859f79;
+}
+
+.card-articles-title:hover {
+    color: #f19824;
+}
+
 
 /* special button */
 
@@ -93,19 +101,48 @@ body {
     margin-left: 10px
 }
 
-.subscribe-btn {
+.main-page-btn {
     background-color: #232822 !important;
     color: #859f79 !important;
 }
 
-.subscribe-btn:hover {
+.articles-btn {
+    background-color: #f19824 !important;
+}
+
+.articles-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+}
+
+.main-page-btn:hover {
     color: #f19824 !important;
 }
 
-.subscribe-btn.focus {
+.main-page-btn.focus {
     box-shadow: 1px 1px #46583e !important;
 }
 
 .card {
     border: none !important;
+}
+
+.start-quotes {
+    background-image: url(../Images/quotes.png);
+}
+
+.end-quotes {
+    background-image: url(../Images/quotes2.png);
+}
+
+.quotes {
+    width: 100px;
+    height: 67px;
+    background-size: cover;
+    position: relative;
+    padding: 0px !important;
+    margin: 0px;
 }
