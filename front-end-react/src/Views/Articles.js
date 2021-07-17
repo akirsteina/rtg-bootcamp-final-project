@@ -54,14 +54,17 @@ function Articles() {
                     <div className="col-12 breadcrumbs">
                         <Breadcrumbs paths={breadcrumbPaths} />
                     </div>
-                    <div className="col-12">
-                        <ArticleItem articles={currentPosts} loading={loading} />
-                        <Pagination
-                            articlesPerPage={articlesPerPage}
-                            totalArticles={articles.length}
-                            paginate={paginate}
-                        />
-                    </div>
+
+                </div>
+            </div>
+            <div className="container-fluid content-wrapper">
+                <div className="col-12 col-md-8 offset-md-2">
+                    <Pagination
+                        articlesPerPage={articlesPerPage}
+                        totalArticles={articles.length}
+                        paginate={paginate}
+                    />
+                    <ArticleItem articles={currentPosts} loading={loading} />
                 </div>
             </div>
         </main>
