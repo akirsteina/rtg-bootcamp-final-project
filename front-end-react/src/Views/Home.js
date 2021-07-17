@@ -3,45 +3,73 @@ import { NavLink } from 'react-router-dom';
 import carousel1 from '../Assets/Images/carousel1.jpg';
 import carousel2 from '../Assets/Images/carousel2.jpg';
 import carousel3 from '../Assets/Images/carousel3.jpg';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Home() {
 
-    const articles = [
-        { title: 'Best potting mixes for your succulents: is perlite really that good?', id: 'potting-mixes', image: carousel1, shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit." },
-        { title: 'Plastic pots - no more!', id: 'plastic-pots', image: carousel2, shortDescription: "Vel quo laudantium enim tempore explicabo harum earum ipsa?" },
-        { title: '10 hottest succulents of this summer', id: 'hottest-succulents', image: carousel3, shortDescription: "Facilis fuga, vero voluptas dicta fugiat consectetur dolor, placeat nulla reprehenderit earum porro." },
-    ]
+    const [articles, setArticles] = useState({
+        loading: true,
+        items: [],
+    });
 
-    const articlesCards = articles.map((article, index) => {
+    const loadArticles = async () => {
+        setArticles({
+            loading: true,
+            items: [],
+        });
+        try {
+            const url = 'http://localhost:8072/articles';
+            const response = await axios.get(url);
+            setArticles({
+                loading: false,
+                items: response.data,
+            });
+        } catch (e) {
+            alert('Whoops, something went wrong!');
+            setArticles({
+                loading: false,
+                items: [],
+            });
+        }
+    }
+
+    useEffect(() => {
+        loadArticles();
+    }, []);
+
+    const articlesCards = articles.items.map((article, index) => {
+        if (index < 3) {
         return (
             <div key={index} className="col-12 col-sm-6 col-md-4 pb-2">
                 <div className="card">
-                    <NavLink to={`/articles/${article.id}`} className="card-element">
-                        <img src={article.image} className="card-img-top" alt="" />
+                    <NavLink to={`/articles/${article._id}`} className="card-element">
+                        <img src={article.mainImage} className="card-img-top" alt="" />
                         <div className="card-body card-img-overlay">
                         <button className="btn articles-btn fw-bold" to="/articles">Read more</button>
 
                         </div>
                     </NavLink>
                 </div>
-                <NavLink to={`/articles/${article.id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
+                <NavLink to={`/articles/${article._id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
                 <p className="lead text-center text-light">{article.shortDescription}</p>
-                
+                <span className="badge main-page-badge">By {article.author}</span>
             </div>
-        )
+        )} else {
+            return <div key={index}></div>;
+        }
     })
 
     return (
         <main>
-            <div className=""></div>
             <div className="container">
                 <div className="row py-5 my-5">
                     <div className="col-6 offset-3">
                         <div className="text-center header-wrapper">
                             <h1 className="pt-1 mb-5 main-header head-info">Happy Plants</h1>
-                            <div class="button-wrapper">
+                            <div className="button-wrapper">
                                 <NavLink to="/articles">
-                                    <p class="animated-word">Discover!</p>
+                                    <p className="animated-word">Discover!</p>
                                 </NavLink>
                             </div>
                             <h2 className="pt-4 mt-1 head-info">We make sure you don't over-water your succulents</h2>
@@ -69,7 +97,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="col-12 col-lg-5 d-flex justify-content-center">
-                        <div id="carouselExampleControls" className="carousel slide carousel-fade d-flex align-items-center" data-bs-ride="carousel">
+                        <div id="carouselExampleControls" className="carousel slide carousel-fade d-flex align-items-center" >
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
                                     <img src={carousel1} className="d-block w-100 rounded-circle" alt="..." />
@@ -109,7 +137,7 @@ function Home() {
                         <h3 className="main-header ">Subscribe</h3>
                         <form>
                             <div className="mb-3">
-                                <label for="email-input" className="form-label text-muted">Enter your e-mail address</label>
+                                <label htmlFor="email-input" className="form-label text-muted">Enter your e-mail address</label>
                                 <input type="email" className="form-control" id="email-input" />
                                 <div id="emailHelp" className="form-text">Get the newest articles, insights into potting, and more!</div>
                                 <button className="btn main-page-btn fw-bold my-3">Submit</button>

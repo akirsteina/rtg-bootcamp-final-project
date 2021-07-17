@@ -2,17 +2,11 @@
 import '../Assets/Css/navigation.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestion } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faQuestion, faHome, faBars, faComment, faUser } from '@fortawesome/free-solid-svg-icons';
 import logo from '../Assets/Images/logo.png';
 
 
 function Header() {
-
-
 
     return (
         <div className="container-fluid hero-image-wrapper">

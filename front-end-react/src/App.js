@@ -9,11 +9,12 @@ import Article from './Views/Article';
 import Forum from './Views/Forum';
 import Login from './Views/Login';
 import About from './Views/About';
+import SimpleReactLightbox from 'simple-react-lightbox';
 
 
 function App() {
   return (
-    <div>
+      <SimpleReactLightbox>
       <Router>
         <ScrollToTop/>
         <Header />
@@ -42,7 +43,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+      </SimpleReactLightbox>
   );
 }
 

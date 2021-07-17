@@ -35,5 +35,9 @@
 
 .article-text {
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 30px;
+    border-radius: 5px;
+}
+
+.article-img {
+    cursor: pointer;
 }

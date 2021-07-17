@@ -101,7 +101,8 @@ body {
     margin-left: 10px
 }
 
-.main-page-btn {
+.main-page-btn,
+.main-page-badge {
     background-color: #232822 !important;
     color: #859f79 !important;
 }
