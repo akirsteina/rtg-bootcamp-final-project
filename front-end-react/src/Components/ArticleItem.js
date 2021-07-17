@@ -1,28 +1,35 @@
-function ArticleItem({articles}) {
 
-    if (!articles.loading && articles.items.length === 0) {
-        return <h5> Something went wrong </h5>;   
-    } else if (!articles.loading) {
-        return (articles.items.map((article, index) => {
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
+function ArticleItem({ articles, loading }) {
+
+    if (!loading && articles.length === 0) {
+        return <h5> Something went wrong :( </h5>;
+    } else if (!loading) {
+        return (articles.map((article, index) => {
             return (
-                <div key={index} className="col-12 col-sm-6 col-md-4 pb-2">
-                    <div className="card">
-                        <NavLink to={`/articles/${article._id}`} className="card-element">
-                            <img src={article.mainImage} className="card-img-top" alt="" />
-                            <div className="card-body card-img-overlay">
-                            <button className="btn articles-btn fw-bold" to="/articles">Read more</button>
-    
-                            </div>
+                <div key={index} className="row p-2 my-3 article-text">
+                    <div className="col-12 col-md-6 col-lg-3">
+                        <NavLink to={`/articles/${article._id}`}>
+                            <img src={article.mainImage} className="article-img img-fluid rounded" alt="" />
                         </NavLink>
                     </div>
-                    <NavLink to={`/articles/${article._id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
-                    <p className="lead text-center text-light">{article.shortDescription}</p>
-                    <span className="badge main-page-badge">By {article.author}</span>
+                    <div className="col-12 col-md-6 col-lg-9">
+                        <NavLink to={`/articles/${article._id}`}><h5 className="text-center py-3 fs-3 main-header special-title article-title">{article.title}</h5></NavLink>
+                        <p className="lead fw-bold text-center text-dark">{article.shortDescription}</p>
+                        <p className="text-dark cut-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam corporis in eum saepe tenetur eligendi pariatur beatae repudiandae, est asperiores, eos debitis! Illo officiis dignissimos mollitia voluptate saepe perferendis assumenda!</p>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <span className="badge main-page-badge">By {article.author}</span>
+                            <NavLink className="btn articles-btn fw-bold" to={`/articles/${article._id}`}>Read more</NavLink>
+                        </div>
+                    </div>
                 </div>
             )
         }))
     } else {
-        return <FontAwesomeIcon icon={faSpinner} spin/>
+        return <FontAwesomeIcon icon={faSpinner} spin />
     }
 }
 
