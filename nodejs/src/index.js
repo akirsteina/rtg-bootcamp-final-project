@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import articleRoutes from './routes/articles.js';
+import messageRoutes from './routes/messages.js';
 import cors from 'cors';
 
 dotenv.config();
@@ -11,6 +12,7 @@ server.use(cors());
 server.use(bodyParser.json());
 
 server.use('/articles', articleRoutes);
+server.use('/messages', messageRoutes);
 
 mongoose.connect(
     process.env.MONGOOSE_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true },
