@@ -5,8 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-
-
+import Breadcrumbs from '../Components/Breadcrumbs';
 
 
 function Article() {
@@ -29,6 +28,7 @@ function Article() {
                 loading: false,
                 items: response.data,
             });
+
         } catch (e) {
             alert('Whoops, something went wrong!');
             setArticle({
@@ -42,11 +42,17 @@ function Article() {
         loadArticle();
     }, []);
 
-    let articleText = <FontAwesomeIcon icon={faSpinner} spin/>;
-    let articleImages = <FontAwesomeIcon icon={faSpinner} spin/>;
-    let articleTitle = <FontAwesomeIcon icon={faSpinner} spin/>;
-    let mainImage = <FontAwesomeIcon icon={faSpinner} spin/>;
-    let firstImage = <FontAwesomeIcon icon={faSpinner} spin/>;
+    const breadcrumbPaths = [
+        { link: '/', label: 'Home' },
+        { link: '/articles', label: 'Articles' },
+        { label: '' },
+    ];
+
+    let articleText = <FontAwesomeIcon icon={faSpinner} spin />;
+    let articleImages = <FontAwesomeIcon icon={faSpinner} spin />;
+    let articleTitle = <FontAwesomeIcon icon={faSpinner} spin />;
+    let mainImage = <FontAwesomeIcon icon={faSpinner} spin />;
+    let firstImage = <FontAwesomeIcon icon={faSpinner} spin />;
     if (!article.loading && article.items.length === 0) {
         articleText = <h5> Something went wrong </h5>;
         articleImages = <h5> Something went wrong </h5>;
@@ -73,11 +79,13 @@ function Article() {
             } else {
                 return <div key={index}></div>
             }
-        });  
+        });
         articleTitle = article.items.title;
         mainImage = article.items.mainImage;
         firstImage = article.items.images[0];
+
     }
+
 
 
     return (
@@ -85,10 +93,13 @@ function Article() {
         <main>
             <div className="container">
                 <div className="row pt-5 mt-5">
+                    <div className="col-12 breadcrumbs">
+                        <Breadcrumbs paths={breadcrumbPaths} />
+                    </div>
                     <div className="col-12 col-lg-8 offset-lg-2">
                         <div className="row pt-5 mt-5 pb-2">
                             <div className="col-12 text-center">
-                                <h1 className="main-header">{articleTitle}</h1>  
+                                <h1 className="main-header">{articleTitle}</h1>
                             </div>
                         </div>
                         <div className="row">

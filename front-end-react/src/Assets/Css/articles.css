@@ -33,11 +33,41 @@
     text-shadow: 2px 1px black;
 }
 
-.article-text {
+.article-text,
+.breadcrumbs {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
 }
 
 .article-img {
     cursor: pointer;
+}
+
+.page-item .page-link {
+    color: black;
+}
+
+.page-item .page-link:hover {
+    color: #f19824;
+}
+
+.page-item .page-link:focus {
+    color: #f19824;
+}
+
+.article-title:hover {
+    color: #f19824;
+}
+
+.breadcrumbs {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.breadcrumb-item a {
+    color: #46583e;
+}
+
+.breadcrumb-item a:hover {
+    color: #859f79;
 }
