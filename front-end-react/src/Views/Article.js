@@ -86,10 +86,7 @@ function Article() {
 
     }
 
-
-
     return (
-
         <main>
             <div className="container">
                 <div className="row pt-5 mt-5">
@@ -125,10 +122,8 @@ function Article() {
                             </div>
                         </SRLWrapper>
                     </div>
-
                 </div>
             </div>
-
         </main >
     )
 }
