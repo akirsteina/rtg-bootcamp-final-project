@@ -89,11 +89,11 @@ body {
 }
 
  ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #46583e;
 }
 
  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: rgba(144, 172, 109, 1);
 }
 
 .special-title {
