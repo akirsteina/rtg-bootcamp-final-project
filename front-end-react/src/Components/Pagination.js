@@ -1,4 +1,4 @@
-function Pagination({ articlesPerPage, totalArticles, paginate, paginatePrevious }) {
+function Pagination({ articlesPerPage, totalArticles, paginate }) {
     const pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(totalArticles / articlesPerPage); i++) {
@@ -8,7 +8,7 @@ function Pagination({ articlesPerPage, totalArticles, paginate, paginatePrevious
 
     return (
         <nav>
-            <ul className="pagination justify-content-end">
+            <ul className="pagination pt-5">
                 {pageNumbers.map((number, index) => {
 
                     return (
