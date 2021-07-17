@@ -172,3 +172,11 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.form-validate p {
+    color: red;
+}
+
+.page404 {
+    height: 95vh;
+}
