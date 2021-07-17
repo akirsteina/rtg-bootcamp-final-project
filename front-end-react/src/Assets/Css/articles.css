@@ -44,7 +44,8 @@
 }
 
 .page-item .page-link {
-    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #46583e;
 }
 
 .page-item .page-link:hover {
@@ -70,4 +71,9 @@
 
 .breadcrumb-item a:hover {
     color: #859f79;
+}
+
+.form-label,
+.chat-name {
+    color: #46583e;
 }
