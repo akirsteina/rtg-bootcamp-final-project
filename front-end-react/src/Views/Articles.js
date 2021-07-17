@@ -54,17 +54,36 @@ function Articles() {
                     <div className="col-12 breadcrumbs">
                         <Breadcrumbs paths={breadcrumbPaths} />
                     </div>
-
+                </div>
+                <div className="row py-5 my-5 special-quote">
+                    <div className="col-12 col-lg-8">
+                        <h1 className="main-header text-center display-4 pb-5">Editor's column</h1>
+                        <p className="lead px-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non molestias fugiat necessitatibus officia a accusamus omnis accusantium repellendus saepe? Accusantium expedita corrupti harum delectus iste laboriosam nisi laudantium ipsum?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ratione reprehenderit nesciunt amet, blanditiis in ut veniam reiciendis minima quis eum odio commodi. Ipsam quis pariatur, tempore at aperiam dolore!
+                        </p>
+                        <p className="lead px-5">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ratione reprehenderit nesciunt amet, blanditiis in ut veniam reiciendis minima quis eum odio commodi. Ipsam quis pariatur, tempore at aperiam dolore!
+                        </p>
+                        <p className="lead px-5">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ratione reprehenderit nesciunt amet, blanditiis in ut veniam reiciendis minima quis eum odio commodi. Ipsam quis pariatur, tempore at aperiam dolore!
+                        </p>
+                    </div>
+                    <div className="col-12 col-lg-4 d-flex">
+                        <img className="img-fluid rounded-circle align-self-center" src="https://images.unsplash.com/photo-1493752603190-08d8b5d1781d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" />
+                    </div>
                 </div>
             </div>
             <div className="container-fluid content-wrapper">
-                <div className="col-12 col-md-8 offset-md-2">
-                    <Pagination
-                        articlesPerPage={articlesPerPage}
-                        totalArticles={articles.length}
-                        paginate={paginate}
-                    />
-                    <ArticleItem articles={currentPosts} loading={loading} />
+                <div className="row pb-5">
+                    <div className="col-12 col-md-8 offset-md-2">
+                        <Pagination
+                            articlesPerPage={articlesPerPage}
+                            totalArticles={articles.length}
+                            paginate={paginate}
+                        />
+                        <ArticleItem articles={currentPosts} loading={loading} />
+                    </div>
                 </div>
             </div>
         </main>
