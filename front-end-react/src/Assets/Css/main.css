@@ -180,3 +180,20 @@ body {
 .page404 {
     height: 95vh;
 }
+
+.react-tabs__tab {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.react-tabs__tab--selected {
+    text-shadow: none;
+    background: rgba(144, 172, 109, 1) !important;
+    border: none !important;
+}
+
+.react-tabs__tab-panel--selected {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    min-height: 60vh;
+}
