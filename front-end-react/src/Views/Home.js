@@ -39,7 +39,7 @@ function Home() {
         loadArticles();
     }, []);
 
-    const articlesCards = articles.items.map((article, index) => {
+    const articlesCards = [...articles.items].reverse().map((article, index) => {
         if (index < 3) {
             return (
                 <div key={index} className="col-12 col-sm-6 col-md-4 pb-2">
