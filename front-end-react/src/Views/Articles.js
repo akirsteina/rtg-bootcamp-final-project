@@ -4,7 +4,7 @@ import axios from 'axios';
 import ArticleItem from '../Components/Articles/ArticleItem';
 import Pagination from '../Components/Articles/Pagination';
 import Breadcrumbs from '../Components/Breadcrumbs';
-import '../Assets/Css/articles.css';
+import '../Assets/Css/style.css';
 
 function Articles() {
     const [articles, setArticles] = useState([]);

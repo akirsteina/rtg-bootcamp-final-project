@@ -1,4 +1,4 @@
-import '../Assets/Css/main.css';
+import '../Assets/Css/style.css';
 import { NavLink } from 'react-router-dom';
 import carousel1 from '../Assets/Images/carousel1.jpg';
 import carousel2 from '../Assets/Images/carousel2.jpg';

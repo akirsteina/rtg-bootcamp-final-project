@@ -1,5 +1,5 @@
 
-import '../Assets/Css/navigation.css';
+import '../Assets/Css/style.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestion, faHome, faBars, faComment, faUser } from '@fortawesome/free-solid-svg-icons';

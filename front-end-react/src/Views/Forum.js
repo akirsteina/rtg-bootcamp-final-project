@@ -1,6 +1,6 @@
 
 import Breadcrumbs from '../Components/Breadcrumbs';
-import '../Assets/Css/forum.css';
+import '../Assets/Css/style.css';
 import ChatMessagesList from '../Components/Forum/ChatMessagesList';
 import NewMessageForm from '../Components/Forum/NewMessageForm';
 import { useState } from 'react';

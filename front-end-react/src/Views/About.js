@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Team from '../Components/About/TabTeam';
 import TabHelp from '../Components/About/TabHelp';
-import '../Assets/Css/main.css';
+import '../Assets/Css/style.css';
 import TabContacts from '../Components/About/TabContacts';
 
 function About() {
