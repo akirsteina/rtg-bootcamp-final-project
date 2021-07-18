@@ -5,7 +5,7 @@ function Page404() {
 
     return (
         <div className="container page404 d-flex justify-content-center flex-column">
-            <div className="row py-5 align-content-center">
+            <div className="row py-5 align-content-center article-text">
                 <div className="col-6 offset-3 text-center">
                     <h1>Whoops...</h1>
                     <p className="lead">Looks like something went wrong!</p>
