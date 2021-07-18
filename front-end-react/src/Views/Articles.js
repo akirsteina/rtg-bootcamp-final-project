@@ -57,10 +57,8 @@ function Articles() {
                 </div>
                 <div className="row py-5 my-5 special-quote">
                     <div className="col-12 col-lg-8">
-                        <h1 className="main-header text-center display-4 pb-5">Editor's column</h1>
-                        <p className="lead px-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias non molestias fugiat necessitatibus officia a accusamus omnis accusantium repellendus saepe? Accusantium expedita corrupti harum delectus iste laboriosam nisi laudantium ipsum?
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ratione reprehenderit nesciunt amet, blanditiis in ut veniam reiciendis minima quis eum odio commodi. Ipsam quis pariatur, tempore at aperiam dolore!
+                        <h1 className="main-header text-center display-4 pb-3">Editor's column</h1>
+                        <p className="lead px-5">Irony PBR&B sustainable, pour-over vinyl woke cliche air plant literally hashtag art party. Hot chicken sustainable freegan woke tacos franzen literally portland four loko kinfolk. Literally pabst vaporware, food truck yuccie bicycle rights PBR&B offal tilde pok pok. Microdosing hammock health goth occupy gluten-free, polaroid single-origin coffee kitsch jianbing chartreuse seitan ethical.
                         </p>
                         <p className="lead px-5">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ratione reprehenderit nesciunt amet, blanditiis in ut veniam reiciendis minima quis eum odio commodi. Ipsam quis pariatur, tempore at aperiam dolore!

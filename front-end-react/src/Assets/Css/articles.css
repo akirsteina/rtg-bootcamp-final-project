@@ -74,7 +74,8 @@
 }
 
 .form-label,
-.chat-name {
+.chat-name,
+.about-title {
     color: #46583e;
 }
 

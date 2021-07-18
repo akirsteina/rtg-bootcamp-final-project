@@ -49,10 +49,9 @@ function Article() {
     ];
 
     let articleText = <FontAwesomeIcon icon={faSpinner} spin />;
-    let articleImages = <FontAwesomeIcon icon={faSpinner} spin />;
+    let articleImages, firstImage, articleAuthor;
     let articleTitle = <FontAwesomeIcon icon={faSpinner} spin />;
     let mainImage = <FontAwesomeIcon icon={faSpinner} spin />;
-    let firstImage = <FontAwesomeIcon icon={faSpinner} spin />;
     if (!article.loading && article.items.length === 0) {
         articleText = <h5> Something went wrong </h5>;
         articleImages = <h5> Something went wrong </h5>;
@@ -83,7 +82,7 @@ function Article() {
         articleTitle = article.items.title;
         mainImage = article.items.mainImage;
         firstImage = article.items.images[0];
-
+        articleAuthor = article.items.author;
     }
 
     return (
@@ -111,6 +110,9 @@ function Article() {
                 <div className="row py-5">
                     <div className="col-8 offset-2 article-text p-5">
                         {articleText}
+                        <div className="fw-bold fs-4 text-end pb-3">
+                            Author: <span className="badge main-page-badge">{articleAuthor}</span>
+                        </div>
                         <SRLWrapper>
                             <div className="row">
                                 <div className="col p-1">
