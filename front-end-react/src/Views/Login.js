@@ -1,12 +1,7 @@
-
 import Breadcrumbs from '../Components/Breadcrumbs';
 import Form from '../Components/Form';
 
-
-
 function Login() {
-
-
 
     const breadcrumbPaths = [
         { link: '/', label: 'Home' },
@@ -21,7 +16,7 @@ function Login() {
                 </div>
             </div>
             <div className="row mt-2">
-                <div className="col-12 col-lg-6 offset-lg-3 content-wrapper p-5 rounded my-2">
+                <div className="col-12 col-lg-6 offset-lg-3 special-quote p-5 rounded my-2">
                     <h3 className="special-title main-header mb-3">Sign up now!</h3>
                    <Form/>
                 </div>
