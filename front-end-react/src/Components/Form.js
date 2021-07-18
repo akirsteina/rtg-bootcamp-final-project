@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
+import { NavLink } from "react-router-dom";
 
 function Form() {
-    const { 
+    const {
         register,
         formState: { errors },
         handleSubmit,
@@ -20,14 +21,14 @@ function Form() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="row">
+            <div className="row mb-3">
                 <div className="col form-validate">
-                    <label htmlFor="username" className="form-label">Username: *</label>
-                    <div className="input-group mb-3">
+                    <div className="input-group">
                         <span className="input-group-text">@</span>
                         <input
                             type="text"
                             className="form-control"
+                            placeholder="Username: *"
                             {...register("username", {
                                 required: "Username is required",
                                 minLength: {
@@ -40,12 +41,12 @@ function Form() {
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row  mb-3">
                 <div className="col form-validate">
-                    <label htmlFor="email" className="form-label">Email: *</label>
                     <input
                         className="form-control"
                         type="text"
+                        placeholder="Email: *"
                         {...register("email", {
                             required: "Email is required",
                             pattern: {
@@ -61,11 +62,11 @@ function Form() {
             <div className="row">
                 <div className="col form-validate">
                     <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Password: *</label>
                         <input
                             type="password"
                             id="input-password"
                             className="form-control"
+                            placeholder="Password: *"
                             {...register("password", {
                                 required: "Password is required",
                                 minLength: {
@@ -82,11 +83,10 @@ function Form() {
                     </div>
 
                     <div className="mb-3">
-                        <label htmlFor="repeat-password" className="form-label">Repeat your password: *</label>
                         <input
-                        
                             type="password"
                             className="form-control"
+                            placeholder="Repeat password: *"
                             {...register("repeatpassword", {
                                 validate: value => value === password.current || "The passwords do not match"
                             })}
@@ -96,11 +96,11 @@ function Form() {
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row mb-3">
                 <div className="col form-validate">
-                    <label htmlFor="firstName" className="form-label">First Name: *</label>
                     <input
                         className="form-control"
+                        placeholder="First name *"
                         {...register("firstName", {
                             required: "First name is required",
                             minLength: {
@@ -117,11 +117,11 @@ function Form() {
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row mb-3">
                 <div className="col form-validate">
-                    <label htmlFor="lastName" className="form-label">Last Name: *</label>
                     <input
                         className="form-control"
+                        placeholder="Last name *"
                         {...register("lastName", {
                             required: "Last name is required",
                             minLength: {
@@ -135,6 +135,38 @@ function Form() {
                         })}
                     />
                     {errors.lastName && <p>{errors.lastName.message}</p>}
+                </div>
+            </div>
+
+            <div className="row mb-3">
+                <div className="col form-validate">
+                    <select className="form-select">
+                        <option defaultValue hidden>Select your country:</option>
+                        <option value="1">Latvia</option>
+                        <option value="2">Lithuania</option>
+                        <option value="3">Estonia</option>
+                    </select>
+                </div>
+            </div>
+
+            <div className="row mb-3">
+                <div className="col form-validate">
+                    <div className="form-check py-2">
+                        <input className="form-check-input" type="checkbox" value="" id="termsInput" {...register("termsInput", {
+                            required: "You must agree to register!"
+                        })}
+                    />
+                    {errors.termsInput && <p>{errors.termsInput.message}</p>}
+                        <label className="form-check-label" htmlFor="termsInput">
+                            I agree to the <NavLink to="/">Terms & Conditions</NavLink> *
+                        </label>
+                    </div>
+                    <div className="form-check py-2">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" defaultChecked />
+                        <label className="form-check-label" htmlFor="flexCheckChecked">
+                            Subscribe to our awesome newsletter
+                        </label>
+                    </div>
                 </div>
             </div>
 
