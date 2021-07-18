@@ -40,7 +40,7 @@ function Articles() {
     const indexOfFirstPost = indexOfLastPost - articlesPerPage;
     let currentPosts;
     if (!loading) {
-        currentPosts = articles.slice(indexOfFirstPost, indexOfLastPost);
+        currentPosts = [...articles].reverse().slice(indexOfFirstPost, indexOfLastPost);
     }
 
     // Change pages
