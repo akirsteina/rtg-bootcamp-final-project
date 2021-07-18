@@ -118,16 +118,19 @@ body {
 }
 
 .main-page-btn,
-.main-page-badge {
+.main-page-badge,
+.swal-button--cancel {
     background-color: #232822 !important;
     color: #859f79 !important;
 }
 
-.articles-btn {
+.articles-btn,
+.swal-button--confirm {
     background-color: #f19824 !important;
 }
 
-.articles-btn:hover {
+.articles-btn:hover,
+.swal-button--confirm:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -136,7 +139,8 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
 }
 
-.main-page-btn:hover {
+.main-page-btn:hover,
+.swal-button--cancel:hover {
     color: #f19824 !important;
 }
 
@@ -195,5 +199,10 @@ body {
 .react-tabs__tab-panel--selected {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
-    min-height: 60vh;
+    min-height: 55vh;
+}
+
+.empty-background {
+    background-color: #e8e8e8;
+    height: 10vh;
 }

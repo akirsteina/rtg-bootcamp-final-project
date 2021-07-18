@@ -13,7 +13,7 @@ function TabHelp() {
                 </p>
             </div>
             <div className="col-12 col-lg-6 help-wrapper">
-                <img className="img-fluid rounded" src={image}/>
+                <img className="img-fluid rounded" alt="" src={image}/>
             </div>
             
         </div>

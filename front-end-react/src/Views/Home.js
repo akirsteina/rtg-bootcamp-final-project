@@ -5,6 +5,7 @@ import carousel2 from '../Assets/Images/carousel2.jpg';
 import carousel3 from '../Assets/Images/carousel3.jpg';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import SubscribeField from '../Components/SubscribeField';
 
 function Home() {
 
@@ -40,22 +41,23 @@ function Home() {
 
     const articlesCards = articles.items.map((article, index) => {
         if (index < 3) {
-        return (
-            <div key={index} className="col-12 col-sm-6 col-md-4 pb-2">
-                <div className="card">
-                    <NavLink to={`/articles/${article._id}`} className="card-element">
-                        <img src={article.mainImage} className="card-img-top" alt="" />
-                        <div className="card-body card-img-overlay">
-                        <button className="btn articles-btn fw-bold" to="/articles">Read more</button>
+            return (
+                <div key={index} className="col-12 col-sm-6 col-md-4 pb-2">
+                    <div className="card">
+                        <NavLink to={`/articles/${article._id}`} className="card-element">
+                            <img src={article.mainImage} className="card-img-top" alt="" />
+                            <div className="card-body card-img-overlay">
+                                <button className="btn articles-btn fw-bold" to="/articles">Read more</button>
 
-                        </div>
-                    </NavLink>
+                            </div>
+                        </NavLink>
+                    </div>
+                    <NavLink to={`/articles/${article._id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
+                    <p className="lead text-center text-light">{article.shortDescription}</p>
+                    <span className="badge main-page-badge">By {article.author}</span>
                 </div>
-                <NavLink to={`/articles/${article._id}`}><h5 className="text-center pt-3 text-uppercase card-articles-title">{article.title}</h5></NavLink>
-                <p className="lead text-center text-light">{article.shortDescription}</p>
-                <span className="badge main-page-badge">By {article.author}</span>
-            </div>
-        )} else {
+            )
+        } else {
             return <div key={index}></div>;
         }
     })
@@ -132,19 +134,8 @@ function Home() {
 
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-8 offset-2 text-center py-3">
-                        <h3 className="main-header ">Subscribe</h3>
-                        <form>
-                            <div className="mb-3">
-                                <label htmlFor="email-input" className="form-label text-muted">Enter your e-mail address</label>
-                                <input type="email" className="form-control" id="email-input" />
-                                <div id="emailHelp" className="form-text">Get the newest articles, insights into potting, and more!</div>
-                                <button className="btn main-page-btn fw-bold my-3">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-
+                <div className="py-4">
+                    <SubscribeField />
                 </div>
             </div>
         </main>

@@ -40,7 +40,12 @@ function About() {
                                 <TabContacts/>
                             </TabPanel>
                         </Tabs>
-
+                    </div>
+                </div>
+            </div>
+            <div className="container-fluid">
+            <div className="row">
+                    <div className="col empty-background">
                     </div>
                 </div>
             </div>
