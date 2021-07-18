@@ -25,7 +25,7 @@ function GoogleMaps() {
 
     return (
         <LoadScript
-            googleMapsApiKey='AIzaSyB9UCXNXLIb0OnS3c3soetdtRieHM-ESAk'>
+            googleMapsApiKey=''>
             <GoogleMap
                 mapContainerStyle={mapStyles}
                 zoom={13}

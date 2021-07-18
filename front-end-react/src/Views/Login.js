@@ -1,5 +1,5 @@
 import Breadcrumbs from '../Components/Breadcrumbs';
-import Form from '../Components/Form';
+import Form from '../Components/Profile/Form';
 
 function Login() {
 
