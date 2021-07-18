@@ -8,8 +8,8 @@ function ArticleField({ article, loading }) {
     let articleText, articleImages;
     if (!loading && article.length === 0) {
         articleText = <h5> Something went wrong :( </h5>;
-        articleImages = <h5> Something went wrong :( </h5>; 
-        }
+        articleImages = <h5> Something went wrong :( </h5>;
+    }
     else if (!loading) {
         articleText = article.paragraphs.map((paragraph, index) => {
             if (index === 0) {
@@ -69,12 +69,14 @@ function ArticleField({ article, loading }) {
                         <div className="col-8 offset-2 article-text p-5">
                             {articleText}
 
-                            <div className="fw-bold fs-4 text-end pb-3">
-                                Author: <span className="badge main-page-badge">{article.author}</span>
+                            <div className="fw-bold fs-4 d-flex justify-content-between pb-3">
+                                <span className="review-sent fw-lighter">{(article.createdAt).substring(0, 10)}
+                                </span>
+                                <span>Author: <span className="badge main-page-badge">{article.author}</span></span>
                             </div>
                             <SRLWrapper>
                                 <div className="row">
-                                    <div className="col p-1">
+                                    <div className="col p-1 text-center">
                                         <img src={article.images[0]} alt="" className="img-fluid article-img rounded"></img>
                                     </div>
                                 </div>
