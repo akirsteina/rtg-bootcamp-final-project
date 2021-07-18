@@ -15,8 +15,9 @@ function NewMessageForm({reloadMessagesList}) {
         setNewMessage(event.target.value);
     }
 
-    const createNewMessage = async () => {
+    const createNewMessage = async (event) => {
         if (newUserName === '' || newMessage === '') {
+            event.preventDefault();
             alert('All fields are required!');
             return;
         };

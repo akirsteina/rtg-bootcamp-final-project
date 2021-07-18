@@ -34,8 +34,6 @@ function ChatMessagesList({ counter }) {
         loadMessages();
     }, [counter]);
 
-    console.log(messages.loading);
-
     return (
         <ul className="list-group mt-2">
             <Messages messages={messages}/>

@@ -11,13 +11,13 @@ function Messages({messages}) {
         return ([...messages.items].reverse().map((message, index) => {
             return (
                 <li key={index} className="list-group-item">
-                <div class="row">
-                    <div class="col">
-                        <span class="user-name lead fw-bold mx-3 chat-name">{message.userName}</span>
-                        <span class="review-sent fw-lighter">{message.createdAt}</span>
+                <div className="row">
+                    <div className="col">
+                        <span className="user-name lead fw-bold mx-3 chat-name">{message.userName}</span>
+                        <span className="review-sent fw-lighter">{message.createdAt}</span>
                     </div>
                 </div>
-                <div class="review pt-2">{message.message}</div>
+                <div className="review pt-2">{message.message}</div>
             </li>
             )
         }))
