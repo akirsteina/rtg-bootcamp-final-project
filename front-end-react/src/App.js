@@ -13,38 +13,58 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 
 
 function App() {
-  return (
-      <SimpleReactLightbox>
-      <Router>
-        <ScrollToTop/>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/articles">
-            <Articles />
-          </Route>
-          <Route path="/articles/:articleID">
-            <Article />
-          </Route>
-          <Route path="/forum">
-            <Forum />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/about">
-            <About/>
-          </Route>
-          <Route>
-            <Page404 />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
-      </SimpleReactLightbox>
-  );
+    return ( <
+        SimpleReactLightbox >
+        <
+        Router >
+        <
+        ScrollToTop / >
+        <
+        Header / >
+        <
+        Switch >
+        <
+        Route exact path = "/" >
+        <
+        Home / >
+        <
+        /Route> <
+        Route exact path = "/articles" >
+        <
+        Articles / >
+        <
+        /Route> <
+        Route path = "/articles/:articleID" >
+        <
+        Article / >
+        <
+        /Route> <
+        Route path = "/forum" >
+        <
+        Forum / >
+        <
+        /Route> <
+        Route path = "/login" >
+        <
+        Login / >
+        <
+        /Route> <
+        Route path = "/about" >
+        <
+        About / >
+        <
+        /Route> <
+        Route >
+        <
+        Page404 / >
+        <
+        /Route> <
+        /Switch> <
+        Footer / >
+        <
+        /Router> <
+        /SimpleReactLightbox>
+    );
 }
 
 export default App;
