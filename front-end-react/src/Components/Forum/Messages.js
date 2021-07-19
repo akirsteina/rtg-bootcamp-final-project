@@ -9,7 +9,6 @@ function Messages({ messages }) {
     }
     else if (!messages.loading) {
 
-
         return ([...messages.items].reverse().map((message, index) => {
             return (
                 <li key={index} className="list-group-item">

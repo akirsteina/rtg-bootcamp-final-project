@@ -5,7 +5,6 @@ function Pagination({ articlesPerPage, totalArticles, paginate }) {
         pageNumbers.push(i);
     }
 
-
     return (
         <nav>
             <ul className="pagination pt-5">

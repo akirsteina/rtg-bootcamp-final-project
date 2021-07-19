@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestion, faHome, faBars, faComment, faUser } from '@fortawesome/free-solid-svg-icons';
 import logo from '../Assets/Images/logo.png';
 
-
 function Header() {
 
     return (

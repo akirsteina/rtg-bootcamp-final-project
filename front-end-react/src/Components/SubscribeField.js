@@ -1,15 +1,11 @@
 import swal from 'sweetalert';
 import {useState} from 'react';
 
-
 function SubscribeField() {
 
     const [email, setEmail] = useState('');
     const handleInput = (event) => {
-
         setEmail(event.target.value);
-        console.log(email)
-
     }
 
     const popUpWindow = (event) => {
@@ -32,7 +28,6 @@ function SubscribeField() {
                 </div>
             </form>
         </div>
-
     </div>
     )
 }

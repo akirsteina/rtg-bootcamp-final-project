@@ -45,5 +45,3 @@ function Forum() {
 }
 
 export default Forum;
-
-// https://www.w3schools.com/howto/howto_css_chat.asp

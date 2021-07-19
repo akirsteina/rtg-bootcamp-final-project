@@ -1,6 +1,5 @@
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-
 function GoogleMaps() {
     const mapStyles = {
         height: "50vh",
@@ -21,7 +20,6 @@ function GoogleMaps() {
             },
         },
     ];
-
 
     return (
         <LoadScript

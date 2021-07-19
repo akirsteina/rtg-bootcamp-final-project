@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ArticleField from '../Components/Article/ArticleField';
 
-
 function Article() {
 
     const { articleID } = useParams();
@@ -29,9 +28,6 @@ function Article() {
     useEffect(() => {
         loadArticle();
     }, []);
-
-    
-   
 
     return (
         <ArticleField article={article} loading={loading}/>
