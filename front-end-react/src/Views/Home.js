@@ -66,15 +66,17 @@ function Home() {
         <main>
             <div className="container">
                 <div className="row py-5 my-5">
-                    <div className="col-6 offset-3">
+                    <div className="col-12 col-md-6 offset-md-3">
                         <div className="text-center header-wrapper">
-                            <h1 className="pt-1 mb-5 main-header head-info">Happy Plants</h1>
-                            <div className="button-wrapper">
-                                <NavLink to="/articles">
-                                    <p className="animated-word">Discover!</p>
-                                </NavLink>
+                            <div className="header-background p-4">
+                                <h1 className="pt-1 mb-5 main-header head-info">Happy Plants</h1>
+                                <div className="button-wrapper">
+                                    <NavLink to="/articles">
+                                        <p className="animated-word">Discover!</p>
+                                    </NavLink>
+                                </div>
+                                <h2 className="pt-4 mt-1 head-info">We make sure you don't over-water your succulents</h2>
                             </div>
-                            <h2 className="pt-4 mt-1 head-info">We make sure you don't over-water your succulents</h2>
                         </div>
                     </div>
                 </div>
