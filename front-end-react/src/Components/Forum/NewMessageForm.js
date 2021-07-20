@@ -1,6 +1,6 @@
 import Axios from "axios";
 import { useState } from "react";
-import ReCAPTCHA, {loadReCaptcha} from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function NewMessageForm({ reloadMessagesList }) {
 
