@@ -16,6 +16,7 @@ function NewMessageForm({ reloadMessagesList }) {
         setNewMessage(event.target.value);
     }
 
+    
     const createNewMessage = async (event) => {
         if (newUserName === '' || newMessage === '') {
             event.preventDefault();
