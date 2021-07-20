@@ -16,7 +16,7 @@ function Messages({ messages }) {
                     <div className="row">
                         <div className="col d-flex justify-content-between align-items-center">
                             <span className="user-name lead fw-bold mx-3 chat-name">{message.userName}</span>
-                            <span className="review-sent badge bg-success fw-lighter">{format(parseJSON(message.createdAt), 'yyyy/MM/dd      H:m')} 
+                            <span className="review-sent badge bg-success fw-lighter">{format(parseJSON(message.createdAt), 'yyyy/MM/dd H:m')} 
                             </span>
                         </div>
                     </div>

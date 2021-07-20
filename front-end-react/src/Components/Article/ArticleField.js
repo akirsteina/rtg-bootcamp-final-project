@@ -2,6 +2,8 @@ import Breadcrumbs from '../Breadcrumbs';
 import { SRLWrapper } from "simple-react-lightbox";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { format, parseJSON } from 'date-fns';
+
 
 function ArticleField({ article, loading }) {
 
@@ -70,7 +72,7 @@ function ArticleField({ article, loading }) {
                             {articleText}
 
                             <div className="fw-bold fs-4 d-flex justify-content-between pb-3">
-                                <span className="review-sent fw-lighter">{(article.createdAt).substring(0, 10)}
+                                <span className="review-sent fw-lighter">Posted on: {format(parseJSON(article.createdAt), 'yyyy/MM/dd H:m')}
                                 </span>
                                 <span>Author: <span className="badge main-page-badge">{article.author}</span></span>
                             </div>
