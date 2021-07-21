@@ -79,6 +79,8 @@ function Articles() {
                             articlesPerPage={articlesPerPage}
                             totalArticles={articles.length}
                             paginate={paginate}
+                            currentPage={currentPage}
+                            indexOfLastPost={indexOfLastPost}
                         />
                         <ArticleItem articles={currentPosts} loading={loading} />
                     </div>

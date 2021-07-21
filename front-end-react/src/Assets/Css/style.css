@@ -379,7 +379,7 @@ footer {
 
 .page-item .page-link {
     background-color: rgba(255, 255, 255, 0.7);
-    color: #46583e;
+    color: #f19824;
 }
 
 .page-item .page-link:hover {
@@ -392,6 +392,14 @@ footer {
 
 .article-title:hover {
     color: #f19824;
+}
+
+.active-page {
+    background-color: rgba(197, 196, 196, 0.74) !important;
+}
+
+.disabled-btn {
+    color: grey !important;
 }
 
 .breadcrumbs {
