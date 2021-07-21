@@ -80,7 +80,6 @@ function Articles() {
                             totalArticles={articles.length}
                             paginate={paginate}
                             currentPage={currentPage}
-                            indexOfLastPost={indexOfLastPost}
                         />
                         <ArticleItem articles={currentPosts} loading={loading} />
                     </div>
