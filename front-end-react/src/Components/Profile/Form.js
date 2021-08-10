@@ -7,13 +7,15 @@ function Form() {
         register,
         formState: { errors },
         handleSubmit,
-        watch
+        watch,
+        reset
     } = useForm({
         mode: "onChange"
     });
     const onSubmit = (data, event) => {
         event.preventDefault();
         alert(JSON.stringify(data));
+        reset();
     };
 
     const password = useRef({});
